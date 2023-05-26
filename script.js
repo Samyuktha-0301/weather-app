@@ -1,7 +1,7 @@
 const getWeather =(city)=>{
-	cityName.innerHTML=city
+	
 
-const url = 'https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Hyderabad';
+const url = `https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=${city}`;
 const options = {
 	method: 'GET',
 	headers: {
@@ -17,11 +17,8 @@ async function Fetch() {
 		 await fetch(url, options)
 		   .then(response =>response.json())
 		   .then((response)=> {
-		  
-console.log(response)
-
-
-		
+		   cityName.innerHTML=city
+		       
 			//	cloud_pct.innerHTML= response.cloud_pct
 				temp.innerHTML= response.temp
 				temp2.innerHTML= response.temp
